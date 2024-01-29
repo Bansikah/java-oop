@@ -1,14 +1,39 @@
-public class Animal {
+public abstract class Animal {
+    //Declaring our variables globally
+    String name;
+    String breed;
 
-    public static void main(String [] args){
+    String color;
 
-        Zoo animal1 = new Zoo("Cat", "Persian", "white", 2);
-        Zoo animal2 = new Zoo("Monkey", "Tamarin", "brown", 3);
+    int age;
 
-        animal1.properties();
-        animal1.movement();
+    //Constructor
+    public Animal(String name, String breed, String color, int age) {
+        this.name = name;
+        this.breed = breed;
+        this.color = color;
+        this.age = age;
 
-        animal2.properties();
-        animal2.Digestion();
     }
+
+    //other methods
+    public void properties() {
+        System.out.println("I am animal " + name);
+        System.out.println("I am of breed " + breed);
+        System.out.println("My color is " + color);
+        System.out.println("I am " + age + " years old");
+    }
+
+    public void Sens() {
+        System.out.println("I have sensory organs");
+    }
+
+    public void movement() {
+        System.out.println("I can move....");
+    }
+
+    public void Digestion() {
+        System.out.println("I can digest food");
+    }
+ public abstract void eat();
 }

@@ -1,38 +1,30 @@
 public class Zoo {
-      //Declaring our variables globally
-        String name;
-        String breed;
 
-        String color;
+    public static void main(String [] args){
 
-        int age;
-
-        //Constructor
-        public Zoo(String name, String breed, String color, int age){
-    this.name = name;
-    this.breed = breed;
-    this.color = color;
-    this.age = age;
-
-}
-//other methods
-        public void properties(){
-            System.out.println("I am animal "+ name);
-            System.out.println("I am of breed "+ breed);
-            System.out.println("My color is "+ color);
-            System.out.println("I am "+ age +" years old");
-        }
-
-        public void Sens(){
-            System.out.println("I have sensory organs");
-        }
-
-        public void movement(){
-            System.out.println("I can move....");
-        }
-        public void Digestion(){
-            System.out.println("I can digest food");
-        }
+        //The animal class
+//        Animal animal1 = new Animal("Cat", "Persian", "white", 2);
+//        animal1.properties();
+//        animal1.movement();
+//        Animal animal2 = new Animal("Monkey", "Tamarin", "brown", 3);
+//        animal2.properties();
+//        animal2.Digestion();
+        //The fish class
+        Fish animal3 = new Fish();
+        animal3.swim();
+        //The bird class, also the concept of inheritance, the bird can now inherit the properties method
+        Bird bird1 = new Bird("Zogi", "Parrot", "yellow", 4);
+        bird1.properties();
 
 
+        Chicken chick1 = new Chicken("Dodo", "Checkens", "brown", 1);
+        chick1.fly();
+
+        //it is posible to use the animal class to create a new sparrow cause it is inheriting properties from the parent
+        //class bird and bird inherits from the class Animal so automatically, it inherits the properties of the class Animal.
+      Animal sparrow1 = new Sparrow("Nicke", "bird", "white", 2);
+      sparrow1.eat();
+
+
+    }
 }
